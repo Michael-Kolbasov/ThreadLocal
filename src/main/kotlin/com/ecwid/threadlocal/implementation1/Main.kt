@@ -19,6 +19,6 @@ fun main() {
     threads.forEachIndexed { i, t ->
         val current = Thread.currentThread()
         val threadLocalFromAnotherThread = t.threadLocals.map[MyThreadLocal(i)]
-        println("From the main thread, accessibility is lost: ($i, $current) -> $threadLocalFromAnotherThread")
+        println("From the main thread, accessibility is lost: ($current) -> $threadLocalFromAnotherThread")
     }
 }
